@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test Company</string>
+    <string name="hint_name">Enter Your Name*</string>
+    <string name="hint_emailid">Enter your EmailId*</string>
+    <string name="hint_phonenumber">Enter Your Phone Number* </string>
+    <string name="hint_description">Enter Description*</string>
+    <string name="submit">Submit</string>
+</resources>
