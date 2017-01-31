@@ -10,6 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.testcompany.MainActivity">
+<TextView
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Request a Quote"
+    android:textStyle="bold|italic"
+    android:textSize="22sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descripiton"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_name"
@@ -47,6 +60,19 @@
         android:hint="@string/hint_phonenumber"
         android:maxLength="10"/>
 </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget*"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
     <android.support.design.widget.TextInputLayout
     android:id="@+id/input_layout_description"
     android:layout_width="match_parent"
@@ -57,7 +83,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="@string/hint_description" />
+        android:hint="@string/hint_Comment" />
+
 </android.support.design.widget.TextInputLayout>
     <Button
         android:id="@+id/submit"
@@ -66,9 +93,5 @@
         android:layout_gravity="center"
         android:text="@string/submit"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="karthi@gmail.com"
-        android:autoLink="email"/>
+
 </LinearLayout>

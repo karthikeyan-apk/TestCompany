@@ -3,6 +3,8 @@
     <string name="hint_name">Enter Your Name*</string>
     <string name="hint_emailid">Enter your EmailId*</string>
     <string name="hint_phonenumber">Enter Your Phone Number* </string>
-    <string name="hint_description">Enter Description*</string>
+    <string name="hint_Comment">Enter Comment</string>
     <string name="submit">Submit</string>
+    <string name="descripiton">To Purchase a Product or to request a quote, pleaase fill out the form below .
+                                A representative will contact you within 24 hours to help you with your request </string>
 </resources>

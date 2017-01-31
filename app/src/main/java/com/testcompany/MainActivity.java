@@ -9,14 +9,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     String userName, eMailId, phoneNumber, description;
     EditText userNameET, eMailIdET, phoneNumberET, descriptionET;
@@ -33,6 +39,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         descriptionET = (EditText) findViewById(R.id.input_description);
         Button submit = (Button) findViewById(R.id.submit);
         rootLayout = (LinearLayout) findViewById(R.id.activity_main);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        spinner.setOnItemSelectedListener(MainActivity.this);
+
+        List<String> categories = new ArrayList<String>();
+        categories.add("less than 10,000");
+        categories.add("less than 50,000");
+        categories.add("less than 1,00,000");
+        categories.add("more than 1,00,000");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(dataAdapter);
         submit.setOnClickListener(this);
 
     }
@@ -94,6 +115,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Valid();
                 break;
         }
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }
